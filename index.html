@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="OsmoSwitcher fixes text typed in the wrong keyboard layout on your Mac: ghbdtn becomes привет, руддщ becomes hello.">
-  <title>OsmoSwitcher — the right keyboard layout, on your Mac</title>
+  <meta name="description" content="OsmoSwitcher fixes text typed in the wrong keyboard layout on Mac and Windows: ghbdtn becomes привет, руддщ becomes hello.">
+  <title>OsmoSwitcher — the right keyboard layout, on Mac and Windows</title>
   <link rel="icon" href="icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,14 +13,16 @@
     <nav aria-label="Primary navigation">
       <a class="brand" href="./">OsmoSwitcher</a>
       <div class="nav-links">
+        <a href="#pricing">Pricing</a>
         <a href="privacy/">Privacy</a>
+        <a href="terms/">Terms</a>
         <a href="support/">Support</a>
       </div>
     </nav>
 
     <header>
       <img class="hero-icon" src="icon.png" alt="" width="112" height="112">
-      <p class="eyebrow">For Mac</p>
+      <p class="eyebrow">For Mac and Windows</p>
       <h1>Typed in the wrong layout? It's fixed.</h1>
       <p class="lede">OsmoSwitcher notices a word typed in the wrong keyboard layout as you type it, erases it and types it again in the right one: <em>ghbdtn</em> becomes <em>привет</em>, <em>руддщ</em> becomes <em>hello</em>.</p>
       <p class="meta"><a href="#ru">По-русски</a></p>
@@ -29,31 +31,65 @@
     <section class="feature-grid">
       <div class="feature">
         <h3>Fixes words as you type</h3>
-        <p>A small model built into the app reads the whole line, so abbreviations, commands and names typed on purpose stay as they are.</p>
+        <p>A small model built into the app reads the whole line, so abbreviations, commands and names typed on purpose stay as they are. In a terminal, <em>пше згыр</em> becomes <em>git push</em>.</p>
       </div>
       <div class="feature">
         <h3>Double Shift</h3>
-        <p>Converts the last words, or the selected text, to the other layout. Only the words that read wrong are changed.</p>
+        <p>Converts the last words, or the selected text, to the other layout. Only the words that read wrong are changed. Press it again to turn them back.</p>
       </div>
       <div class="feature">
         <h3>Private by design</h3>
-        <p>No account, no analytics, no network access. Nothing you type is stored or sent. <a href="privacy/">Privacy Policy</a></p>
+        <p>No account, no analytics. Nothing you type is stored or sent anywhere. <a href="privacy/">Privacy Policy</a></p>
+      </div>
+    </section>
+
+    <section class="shots" aria-label="Screenshots">
+      <h2>On the Mac</h2>
+      <p class="meta">A menu bar app for macOS 15 and later.</p>
+      <figure class="shot"><img src="shots/mac-1.jpg" alt="The OsmoSwitcher menu on a Mac: fix as you type, double Shift, sound, excluded apps" loading="lazy"></figure>
+      <div class="shot-row">
+        <figure class="shot"><img src="shots/mac-2.jpg" alt="OsmoSwitcher Settings on a Mac" loading="lazy"></figure>
+        <figure class="shot"><img src="shots/mac-3.jpg" alt="OsmoSwitcher Pro purchase window on a Mac" loading="lazy"></figure>
+      </div>
+
+      <h2>On Windows</h2>
+      <p class="meta">A tray app for Windows 10 and 11, on Intel, AMD and ARM.</p>
+      <div class="shot-row windows">
+        <figure class="shot"><img src="shots/windows-flyout.png" alt="The OsmoSwitcher tray menu on Windows" loading="lazy"><figcaption>The tray menu</figcaption></figure>
+        <figure class="shot"><img src="shots/windows-stats.png" alt="OsmoSwitcher statistics on Windows: words fixed per day" loading="lazy"><figcaption>Statistics: numbers only</figcaption></figure>
+        <figure class="shot"><img src="shots/windows-exceptions.png" alt="OsmoSwitcher exceptions on Windows: programs and virtual machines left alone" loading="lazy"><figcaption>Programs it leaves alone</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <h2>Pricing</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Mac</h3>
+          <p>Free for 7 days, then a yearly subscription (6,99 €) or a one-time purchase (14,99 €) in the Mac App Store. Payment and refunds are handled by Apple.</p>
+        </div>
+        <div class="card">
+          <h3>Windows</h3>
+          <p>Free for 7 days, then a one-time license key bought on this site. Payment is handled by our online reseller, Lemon Squeezy, the merchant of record. <a href="terms/">Terms and refunds</a></p>
+        </div>
       </div>
     </section>
 
     <article id="ru" lang="ru" style="margin-top: 46px">
       <p class="eyebrow">По-русски</p>
       <h2>Набрали не в той раскладке? Уже исправлено.</h2>
-      <p>OsmoSwitcher замечает слово, набранное не в той раскладке, прямо во время набора, стирает его и печатает заново в нужной: <em>ghbdtn</em> становится <em>привет</em>, <em>руддщ</em> — <em>hello</em>.</p>
+      <p>OsmoSwitcher для Mac и Windows замечает слово, набранное не в той раскладке, прямо во время набора, стирает его и печатает заново в нужной: <em>ghbdtn</em> становится <em>привет</em>, <em>руддщ</em> — <em>hello</em>.</p>
       <h3>Исправляет слова на лету</h3>
-      <p>Встроенная в приложение небольшая модель читает всю строку, поэтому сокращения, команды и имена, набранные намеренно, остаются как есть.</p>
+      <p>Встроенная в приложение небольшая модель читает всю строку, поэтому сокращения, команды и имена, набранные намеренно, остаются как есть. В терминале <em>пше згыр</em> становится <em>git push</em>.</p>
       <h3>Двойной Shift</h3>
-      <p>Переводит последние слова или выделенный текст в другую раскладку. Меняются только слова, набранные не в той раскладке.</p>
+      <p>Переводит последние слова или выделенный текст в другую раскладку. Меняются только слова, набранные не в той раскладке. Нажмите ещё раз — вернутся обратно.</p>
       <h3>Конфиденциально</h3>
-      <p>Без аккаунта, аналитики и доступа к сети. Ничего из набранного не сохраняется и никуда не отправляется. <a href="privacy/">Политика конфиденциальности</a> · <a href="support/">Поддержка</a></p>
+      <p>Без аккаунта и аналитики. Ничего из набранного не сохраняется и никуда не отправляется. <a href="privacy/">Политика конфиденциальности</a> · <a href="support/">Поддержка</a></p>
+      <h3>Цена</h3>
+      <p>Mac: 7 дней бесплатно, затем подписка на год (6,99 €) или покупка навсегда (14,99 €) в Mac App Store. Windows: 7 дней бесплатно, затем лицензионный ключ, который продаётся на этом сайте через Lemon Squeezy. <a href="terms/#ru">Условия и возврат</a></p>
     </article>
 
-    <footer>© 2026 OsmoSwitcher</footer>
+    <footer>© 2026 OsmoSoft · <a href="terms/">Terms</a> · <a href="privacy/">Privacy</a> · <a href="mailto:octoosmo@gmail.com">octoosmo@gmail.com</a></footer>
   </main>
 </body>
 </html>
