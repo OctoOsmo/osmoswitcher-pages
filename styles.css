@@ -396,3 +396,130 @@ kbd {
 .card h3 {
   margin-top: 0;
 }
+
+/* Download buttons in the header */
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin: 18px 0 6px;
+}
+
+.cta .button {
+  margin-top: 0;
+}
+
+.button-soon {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-weight: 600;
+  cursor: default;
+}
+
+/* The typing demo and the time-saved estimate */
+.demo {
+  margin: 28px 0;
+  padding: clamp(20px, 4vw, 32px);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+article .demo {
+  box-shadow: none;
+}
+
+.demo-field {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  padding: 0 20px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--background);
+  font: 600 clamp(1.3rem, 5vw, 1.8rem) / 1 ui-monospace, "SF Mono", Consolas, monospace;
+  overflow: hidden;
+  white-space: pre;
+}
+
+.demo-field.still {
+  padding: 14px 20px;
+  white-space: pre-line;
+  line-height: 1.5;
+}
+
+.demo-field.still .demo-caret {
+  display: none;
+}
+
+.demo-text.fixed {
+  color: var(--accent);
+}
+
+.demo-caret {
+  width: 2px;
+  height: 1.2em;
+  margin-left: 2px;
+  background: var(--text);
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-caret { animation: none; }
+}
+
+.demo-note {
+  min-height: 1.5em;
+  margin: 10px 2px 18px;
+}
+
+.saved {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  align-items: baseline;
+  color: var(--muted);
+}
+
+.saved input {
+  width: 4.2em;
+  margin: 0 4px;
+  padding: 4px 6px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--text);
+  font: inherit;
+  text-align: center;
+}
+
+.saved-result {
+  flex-basis: 100%;
+  margin: 8px 0 0;
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* What it handles */
+.can {
+  margin-top: 46px;
+}
+
+.can-list {
+  padding-left: 1.2em;
+}
+
+.can-list li {
+  max-width: 72ch;
+}
+
+#teams {
+  margin-top: 46px;
+}

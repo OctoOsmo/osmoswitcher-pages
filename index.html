@@ -14,6 +14,7 @@
       <a class="brand" href="./">OsmoSwitcher</a>
       <div class="nav-links">
         <a href="#pricing">Pricing</a>
+        <a href="#teams">Teams</a>
         <a href="privacy/">Privacy</a>
         <a href="terms/">Terms</a>
         <a href="support/">Support</a>
@@ -25,8 +26,19 @@
       <p class="eyebrow">For Mac and Windows</p>
       <h1>Typed in the wrong layout? It's fixed.</h1>
       <p class="lede">OsmoSwitcher notices a word typed in the wrong keyboard layout as you type it, erases it and types it again in the right one: <em>ghbdtn</em> becomes <em>привет</em>, <em>руддщ</em> becomes <em>hello</em>.</p>
-      <p class="meta"><a href="#ru">По-русски</a></p>
+      <p class="cta"><a class="button" href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-x64-setup.exe">Download for Windows</a> <span class="button button-soon" title="In review at Apple">Mac App Store — soon</span></p>
+      <p class="meta">Free for 7 days · Windows on <a href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-arm64-setup.exe">ARM</a> · <a href="#ru">По-русски</a></p>
     </header>
+
+    <section class="demo" data-lang="en" aria-label="How it works">
+      <div class="demo-field" aria-hidden="true"><span class="demo-text"></span><span class="demo-caret"></span></div>
+      <p class="demo-note meta"></p>
+      <div class="saved">
+        <label>Mixed up layouts <input type="number" min="1" max="500" value="20" class="saved-times"> times a day,</label>
+        <label>fixing each by hand takes <input type="number" min="1" max="60" value="5" class="saved-secs"> seconds:</label>
+        <p class="saved-result"></p>
+      </div>
+    </section>
 
     <section class="feature-grid">
       <div class="feature">
@@ -41,6 +53,20 @@
         <h3>Private by design</h3>
         <p>No account, no analytics. Nothing you type is stored or sent anywhere. <a href="privacy/">Privacy Policy</a></p>
       </div>
+    </section>
+
+    <section class="can" aria-label="What it handles">
+      <h2>What it handles</h2>
+      <ul class="can-list">
+        <li><strong>Words you meant.</strong> Abbreviations, commands, names and code stay as typed: the model reads the whole line, not one word.</li>
+        <li><strong>Terminals.</strong> <em>пше згыр</em> becomes <em>git push</em>, <em>ыыр</em> becomes <em>ssh</em>.</li>
+        <li><strong>Remote desktops and virtual machines.</strong> RDP, Parallels, VMware, VirtualBox, TeamViewer: the window of the remote computer is left to the layout inside it, so the two never fight. Install OsmoSwitcher there too, and it fixes words on that side.</li>
+        <li><strong>Selected text.</strong> On the Mac, select a line typed in the wrong layout and press Shift twice.</li>
+        <li><strong>Changing your mind.</strong> Switch the layout back right after a fix, or press Shift twice again, and the word returns as typed.</li>
+        <li><strong>Sound.</strong> On the Mac, a short sound when words are converted, and on fixes if you like.</li>
+        <li><strong>Passwords.</strong> On the Mac, password fields are hidden from the app by macOS itself.</li>
+        <li><strong>Programs of your choice.</strong> Add any app to the exceptions, or pause OsmoSwitcher from its menu.</li>
+      </ul>
     </section>
 
     <section class="shots" aria-label="Screenshots">
@@ -77,16 +103,48 @@
       </div>
     </section>
 
+    <section id="teams">
+      <h2>For teams</h2>
+      <div class="card">
+        <p>OsmoSwitcher keeps what people type on their computers. On the Mac it has no network access at all: macOS doesn't let it connect. On Windows the only thing that goes out is the license check, about once a day: the key and an activation id. Keys for a team, an invoice for the company: write to <a href="mailto:octoosmo@gmail.com?subject=OsmoSwitcher%20for%20a%20team">octoosmo@gmail.com</a>.</p>
+      </div>
+    </section>
+
     <article id="ru" lang="ru" style="margin-top: 46px">
       <p class="eyebrow">По-русски</p>
       <h2>Набрали не в той раскладке? Уже исправлено.</h2>
       <p>OsmoSwitcher для Mac и Windows замечает слово, набранное не в той раскладке, прямо во время набора, стирает его и печатает заново в нужной: <em>ghbdtn</em> становится <em>привет</em>, <em>руддщ</em> — <em>hello</em>.</p>
+      <p class="cta"><a class="button" href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-x64-setup.exe">Скачать для Windows</a> <span class="button button-soon" title="На проверке в Apple">Mac App Store — скоро</span></p>
+      <p class="meta">7 дней бесплатно · Windows на <a href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-arm64-setup.exe">ARM</a> · <a href="#rub">Купить картой РФ</a></p>
+
+      <div class="demo" data-lang="ru">
+        <div class="demo-field" aria-hidden="true"><span class="demo-text"></span><span class="demo-caret"></span></div>
+        <p class="demo-note meta"></p>
+        <div class="saved">
+          <label>Путаете раскладку <input type="number" min="1" max="500" value="20" class="saved-times"> раз в день,</label>
+          <label>исправить вручную — <input type="number" min="1" max="60" value="5" class="saved-secs"> секунд:</label>
+          <p class="saved-result"></p>
+        </div>
+      </div>
       <h3>Исправляет слова на лету</h3>
       <p>Встроенная в приложение небольшая модель читает всю строку, поэтому сокращения, команды и имена, набранные намеренно, остаются как есть. В терминале <em>пше згыр</em> становится <em>git push</em>.</p>
       <h3>Двойной Shift</h3>
       <p>Переводит последние слова или выделенный текст в другую раскладку. Меняются только слова, набранные не в той раскладке. Нажмите ещё раз — вернутся обратно.</p>
       <h3>Конфиденциально</h3>
       <p>Без аккаунта и аналитики. Ничего из набранного не сохраняется и никуда не отправляется. <a href="privacy/">Политика конфиденциальности</a> · <a href="support/">Поддержка</a></p>
+      <h3>Что умеет</h3>
+      <ul class="can-list">
+        <li><strong>Не трогает нужное.</strong> Сокращения, команды, имена и код остаются как набраны: модель читает всю строку, а не одно слово.</li>
+        <li><strong>Терминал.</strong> <em>пше згыр</em> становится <em>git push</em>, <em>ыыр</em> — <em>ssh</em>.</li>
+        <li><strong>Удалённые столы и виртуальные машины.</strong> RDP, Parallels, VMware, VirtualBox, TeamViewer: окно удалённого компьютера остаётся раскладке внутри него, так что они не спорят. Поставьте OsmoSwitcher и туда — он будет исправлять слова на той стороне.</li>
+        <li><strong>Выделенный текст.</strong> На Mac выделите строку, набранную не в той раскладке, и дважды нажмите Shift.</li>
+        <li><strong>Передумали.</strong> Переключите раскладку сразу после исправления или ещё раз дважды нажмите Shift — слово вернётся как было.</li>
+        <li><strong>Звук.</strong> На Mac — короткий звук при переводе слов, а по желанию и при исправлении.</li>
+        <li><strong>Пароли.</strong> На Mac поля паролей скрывает от приложения сама macOS.</li>
+        <li><strong>Исключения.</strong> Любую программу можно добавить в исключения или поставить OsmoSwitcher на паузу.</li>
+      </ul>
+      <h3>Для организаций</h3>
+      <p>OsmoSwitcher оставляет набранное на компьютере. На Mac у него вообще нет доступа к сети — macOS не даёт ему подключаться. На Windows наружу уходит только проверка ключа, примерно раз в день: сам ключ и номер активации. Ключи на команду, счёт для компании — пишите на <a href="mailto:octoosmo@gmail.com?subject=OsmoSwitcher%20%D0%B4%D0%BB%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B">octoosmo@gmail.com</a>.</p>
       <h3>Цена</h3>
       <p>Mac: 7 дней бесплатно, затем подписка на год (6,99 €) или покупка навсегда (14,99 €) в Mac App Store. Windows: 7 дней бесплатно, затем лицензионный ключ на этом сайте — подписка на год (6,99 €) или покупка навсегда (14,99 €) через Lemon Squeezy, или в рублях картой российского банка. <a href="terms/#ru">Условия и возврат</a></p>
 
@@ -104,6 +162,7 @@
       <p class="meta">Оплата картой российского банка через сервис lava.top. После оплаты ключ появится на странице и придёт на почту. Ключ работает на 5 компьютерах. <a href="terms/#ru">Условия и возврат</a> · <a href="privacy/#ru">Конфиденциальность</a></p>
     </article>
 
+    <script src="demo.js" defer></script>
     <footer>© 2026 OsmoSoft · <a href="terms/">Terms</a> · <a href="privacy/">Privacy</a> · <a href="mailto:octoosmo@gmail.com">octoosmo@gmail.com</a></footer>
   </main>
 </body>
