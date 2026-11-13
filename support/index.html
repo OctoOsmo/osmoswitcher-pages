@@ -4,28 +4,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Help and support for the OsmoSwitcher Mac app.">
-  <title>Support — OsmoSwitcher</title>
+  <title data-ru="Поддержка — OsmoSwitcher">Support — OsmoSwitcher</title>
   <link rel="icon" href="../icon.png">
   <link rel="stylesheet" href="../styles.css">
+  <script src="../lang.js"></script>
 </head>
 <body>
-  <main class="shell">
+  <main class="shell narrow">
     <nav aria-label="Primary navigation">
       <a class="brand" href="../">OsmoSwitcher</a>
       <div class="nav-links">
-        <a href="../privacy/">Privacy</a>
-        <a href="../support/">Support</a>
+        <a href="../privacy/" data-only="en">Privacy</a>
+        <a href="../support/" data-only="en">Support</a>
+        <a href="../privacy/#ru" data-only="ru">Конфиденциальность</a>
+        <a href="../support/#ru" data-only="ru">Поддержка</a>
+        <span class="lang-switch" role="group" aria-label="Language"><button type="button" data-set-lang="en">EN</button><button type="button" data-set-lang="ru">RU</button></span>
       </div>
     </nav>
 
-    <header>
+    <header data-only="en">
       <p class="eyebrow">Support</p>
       <h1>How can we help?</h1>
       <p class="lede">OsmoSwitcher works without an account or server. Most problems come down to its two permissions in System Settings.</p>
-      <p class="meta"><a href="#ru">По-русски</a></p>
     </header>
 
-    <article id="en">
+    <article id="en" data-only="en">
       <h2>Words are not fixed</h2>
       <p>Open System Settings → Privacy &amp; Security and make sure OsmoSwitcher is turned on under both <strong>Input Monitoring</strong> and <strong>Accessibility</strong>. The quickest way is the OsmoSwitcher menu: while a permission is missing it shows <strong>Set Up…</strong>, which opens a window with a button for each. macOS applies Input Monitoring only after the app restarts, and that window offers <strong>Restart</strong> when it is needed. If the app is listed but still does not work, remove it from the list with the minus button and allow it again.</p>
       <p>Check also that OsmoSwitcher is not paused in its menu and that the app you are typing in is not listed in Settings under <strong>Don't fix in these apps</strong>.</p>
@@ -53,11 +56,13 @@
       <p>Read the <a href="../privacy/">OsmoSwitcher Privacy Policy</a> to learn what the app accesses and what it stores.</p>
     </article>
 
-    <article id="ru" lang="ru">
+    <header id="ru" lang="ru" data-only="ru">
       <p class="eyebrow">Поддержка</p>
-      <h2>Чем помочь?</h2>
-      <p>OsmoSwitcher работает без аккаунта и сервера. Почти все проблемы сводятся к двум его разрешениям в «Системных настройках».</p>
+      <h1>Чем помочь?</h1>
+      <p class="lede">OsmoSwitcher работает без аккаунта и сервера. Почти все проблемы сводятся к двум его разрешениям в «Системных настройках».</p>
+    </header>
 
+    <article lang="ru" data-only="ru">
       <h2>Слова не исправляются</h2>
       <p>Откройте «Системные настройки» → «Конфиденциальность и безопасность» и проверьте, что OsmoSwitcher включён и в разделе <strong>«Мониторинг ввода»</strong>, и в разделе <strong>«Универсальный доступ»</strong>. Быстрее всего через меню OsmoSwitcher: пока какого-то разрешения нет, там есть кнопка <strong>«Настроить…»</strong> — она открывает окно с кнопкой для каждого разрешения. Доступ к вводу macOS применяет только после перезапуска приложения, и в этом окне появится кнопка <strong>«Перезапустить»</strong>, если он нужен. Если приложение в списке есть, но не работает, удалите его кнопкой «минус» и разрешите заново.</p>
       <p>Проверьте также, что OsmoSwitcher не на паузе в своём меню и что приложения, в котором вы печатаете, нет в настройках в списке <strong>«Не исправлять в приложениях»</strong>.</p>

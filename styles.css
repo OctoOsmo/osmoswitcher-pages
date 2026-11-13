@@ -47,7 +47,7 @@ a {
 }
 
 .shell {
-  width: min(760px, calc(100% - 36px));
+  width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
   padding: 24px 0 72px;
 }
@@ -522,4 +522,190 @@ article .demo {
 
 #teams {
   margin-top: 46px;
+}
+
+/* One language at a time (lang.js); without scripts, English. */
+html:not(.l-ru) [data-only="ru"],
+html.l-ru [data-only="en"] {
+  display: none !important;
+}
+
+.lang-switch {
+  display: inline-flex;
+  padding: 2px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+html:not(.l-en):not(.l-ru) .lang-switch {
+  display: none;
+}
+
+.lang-switch button {
+  padding: 2px 10px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lang-switch button[aria-pressed="true"] {
+  background: var(--accent);
+  color: #0e1226;
+}
+
+.nav-links {
+  align-items: center;
+}
+
+/* Wide screens: the pitch on the left, the demo on the right. */
+@media (min-width: 980px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 56px;
+    align-items: center;
+    margin-bottom: 36px;
+  }
+
+  .hero header {
+    margin-bottom: 0;
+  }
+
+  .hero .demo {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: clamp(2.6rem, 4.6vw, 4.4rem);
+  }
+
+  .can-list {
+    columns: 2 380px;
+    column-gap: 48px;
+  }
+
+  .can-list li {
+    break-inside: avoid;
+  }
+
+  .two {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+
+  .two section {
+    margin-top: 46px;
+  }
+
+  .shots > .shot,
+  .shots > .shot-row:not(.windows) {
+    max-width: 960px;
+  }
+}
+
+.shot-row.windows {
+  max-width: 900px;
+}
+
+.rub-card {
+  margin-top: 46px;
+}
+
+.rub-card h2 {
+  margin-top: 0;
+}
+
+/* The download bar that stays at the bottom once the buttons up top are scrolled away (demo.js). */
+.dock {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  z-index: 10;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: max-content;
+  max-width: calc(100% - 24px);
+  padding: 8px 8px 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 140%);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.dock.shown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.dock .button {
+  margin: 0;
+  padding: 9px 16px;
+  white-space: nowrap;
+}
+
+.dock-name {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.dock-name .meta {
+  font-weight: 400;
+}
+
+body {
+  padding-bottom: 72px;
+}
+
+@media (max-width: 620px) {
+  .dock-name,
+  .dock .button-soon {
+    display: none;
+  }
+
+  .dock {
+    padding: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dock { transition: none; }
+}
+
+/* Pages of text: a column for reading. */
+.shell.narrow {
+  width: min(860px, calc(100% - 32px));
+}
+
+@media (max-width: 620px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 14px;
+  }
 }

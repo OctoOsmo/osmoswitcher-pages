@@ -52,3 +52,22 @@
     show();
   }
 })();
+
+// The download bar: shown while neither the buttons up top nor the download section below are on screen.
+(() => {
+  const marks = document.querySelectorAll('.cta, .download');
+  if (!('IntersectionObserver' in window) || !marks.length) return;
+  const visible = new Set();
+  let started = false;
+  const observer = new IntersectionObserver(entries => {
+    for (const entry of entries) entry.isIntersecting ? visible.add(entry.target) : visible.delete(entry.target);
+    started = true;
+    const show = started && visible.size === 0 && window.scrollY > 200;
+    for (const dock of document.querySelectorAll('.dock')) {
+      dock.classList.toggle('shown', show);
+      dock.setAttribute('aria-hidden', String(!show));
+      for (const link of dock.querySelectorAll('a')) link.tabIndex = show ? 0 : -1;
+    }
+  });
+  marks.forEach(mark => observer.observe(mark));
+})();

@@ -4,166 +4,249 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="OsmoSwitcher fixes text typed in the wrong keyboard layout on Mac and Windows: ghbdtn becomes привет, руддщ becomes hello.">
-  <title>OsmoSwitcher — the right keyboard layout, on Mac and Windows</title>
+  <title data-ru="OsmoSwitcher — нужная раскладка на Mac и Windows">OsmoSwitcher — the right keyboard layout, on Mac and Windows</title>
   <link rel="icon" href="icon.png">
   <link rel="stylesheet" href="styles.css">
+  <script src="lang.js"></script>
 </head>
 <body>
   <main class="shell">
     <nav aria-label="Primary navigation">
       <a class="brand" href="./">OsmoSwitcher</a>
       <div class="nav-links">
-        <a href="#pricing">Pricing</a>
-        <a href="#teams">Teams</a>
-        <a href="privacy/">Privacy</a>
-        <a href="terms/">Terms</a>
-        <a href="support/">Support</a>
+        <a href="#pricing" data-only="en">Pricing</a>
+        <a href="#teams" data-only="en">Teams</a>
+        <a href="privacy/" data-only="en">Privacy</a>
+        <a href="terms/" data-only="en">Terms</a>
+        <a href="support/" data-only="en">Support</a>
+        <a href="#pricing-ru" data-only="ru">Цены</a>
+        <a href="#teams-ru" data-only="ru">Для организаций</a>
+        <a href="privacy/#ru" data-only="ru">Конфиденциальность</a>
+        <a href="support/#ru" data-only="ru">Поддержка</a>
+        <span class="lang-switch" role="group" aria-label="Language"><button type="button" data-set-lang="en">EN</button><button type="button" data-set-lang="ru">RU</button></span>
       </div>
     </nav>
 
-    <header>
-      <img class="hero-icon" src="icon.png" alt="" width="112" height="112">
-      <p class="eyebrow">For Mac and Windows</p>
-      <h1>Typed in the wrong layout? It's fixed.</h1>
-      <p class="lede">OsmoSwitcher notices a word typed in the wrong keyboard layout as you type it, erases it and types it again in the right one: <em>ghbdtn</em> becomes <em>привет</em>, <em>руддщ</em> becomes <em>hello</em>.</p>
-      <p class="cta"><a class="button" href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-x64-setup.exe">Download for Windows</a> <span class="button button-soon" title="In review at Apple">Mac App Store — soon</span></p>
-      <p class="meta">Free for 7 days · Windows on <a href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-arm64-setup.exe">ARM</a> · <a href="#ru">По-русски</a></p>
-    </header>
+    <!-- English -->
+    <div data-only="en">
+      <div class="hero">
+        <header>
+          <img class="hero-icon" src="icon.png" alt="" width="112" height="112">
+          <p class="eyebrow">For Mac and Windows</p>
+          <h1>Typed in the wrong layout? It's fixed.</h1>
+          <p class="lede">OsmoSwitcher notices a word typed in the wrong keyboard layout as you type it, erases it and types it again in the right one: <em>ghbdtn</em> becomes <em>привет</em>, <em>руддщ</em> becomes <em>hello</em>.</p>
+          <p class="cta"><a class="button" href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-x64-setup.exe">Download for Windows</a> <span class="button button-soon" title="In review at Apple">Mac App Store — soon</span></p>
+          <p class="meta">Free for 7 days · Windows on <a href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-arm64-setup.exe">ARM</a></p>
+        </header>
 
-    <section class="demo" data-lang="en" aria-label="How it works">
-      <div class="demo-field" aria-hidden="true"><span class="demo-text"></span><span class="demo-caret"></span></div>
-      <p class="demo-note meta"></p>
-      <div class="saved">
-        <label>Mixed up layouts <input type="number" min="1" max="500" value="20" class="saved-times"> times a day,</label>
-        <label>fixing each by hand takes <input type="number" min="1" max="60" value="5" class="saved-secs"> seconds:</label>
-        <p class="saved-result"></p>
-      </div>
-    </section>
-
-    <section class="feature-grid">
-      <div class="feature">
-        <h3>Fixes words as you type</h3>
-        <p>A small model built into the app reads the whole line, so abbreviations, commands and names typed on purpose stay as they are. In a terminal, <em>пше згыр</em> becomes <em>git push</em>.</p>
-      </div>
-      <div class="feature">
-        <h3>Double Shift</h3>
-        <p>Converts the last words, or the selected text, to the other layout. Only the words that read wrong are changed. Press it again to turn them back.</p>
-      </div>
-      <div class="feature">
-        <h3>Private by design</h3>
-        <p>No account, no analytics. Nothing you type is stored or sent anywhere. <a href="privacy/">Privacy Policy</a></p>
-      </div>
-    </section>
-
-    <section class="can" aria-label="What it handles">
-      <h2>What it handles</h2>
-      <ul class="can-list">
-        <li><strong>Words you meant.</strong> Abbreviations, commands, names and code stay as typed: the model reads the whole line, not one word.</li>
-        <li><strong>Terminals.</strong> <em>пше згыр</em> becomes <em>git push</em>, <em>ыыр</em> becomes <em>ssh</em>.</li>
-        <li><strong>Remote desktops and virtual machines.</strong> RDP, Parallels, VMware, VirtualBox, TeamViewer: the window of the remote computer is left to the layout inside it, so the two never fight. Install OsmoSwitcher there too, and it fixes words on that side.</li>
-        <li><strong>Selected text.</strong> On the Mac, select a line typed in the wrong layout and press Shift twice.</li>
-        <li><strong>Changing your mind.</strong> Switch the layout back right after a fix, or press Shift twice again, and the word returns as typed.</li>
-        <li><strong>Sound.</strong> On the Mac, a short sound when words are converted, and on fixes if you like.</li>
-        <li><strong>Passwords.</strong> On the Mac, password fields are hidden from the app by macOS itself.</li>
-        <li><strong>Programs of your choice.</strong> Add any app to the exceptions, or pause OsmoSwitcher from its menu.</li>
-      </ul>
-    </section>
-
-    <section class="shots" aria-label="Screenshots">
-      <h2>On the Mac</h2>
-      <p class="meta">A menu bar app for macOS 15 and later.</p>
-      <figure class="shot"><img src="shots/mac-1.jpg" alt="The OsmoSwitcher menu on a Mac: fix as you type, double Shift, sound, excluded apps" loading="lazy"></figure>
-      <div class="shot-row">
-        <figure class="shot"><img src="shots/mac-2.jpg" alt="OsmoSwitcher Settings on a Mac" loading="lazy"></figure>
-        <figure class="shot"><img src="shots/mac-3.jpg" alt="OsmoSwitcher Pro purchase window on a Mac" loading="lazy"></figure>
+        <section class="demo" data-lang="en" aria-label="How it works">
+          <div class="demo-field" aria-hidden="true"><span class="demo-text"></span><span class="demo-caret"></span></div>
+          <p class="demo-note meta"></p>
+          <div class="saved">
+            <label>Mixed up layouts <input type="number" min="1" max="500" value="20" class="saved-times"> times a day,</label>
+            <label>fixing each by hand takes <input type="number" min="1" max="60" value="5" class="saved-secs"> seconds:</label>
+            <p class="saved-result"></p>
+          </div>
+        </section>
       </div>
 
-      <h2>On Windows</h2>
-      <p class="meta">A tray app for Windows 10 and 11, on Intel, AMD and ARM.</p>
-      <p id="download"><a class="button" href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-x64-setup.exe">Download for Windows</a> <span class="meta">&nbsp;Intel and AMD · <a href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-arm64-setup.exe">ARM (Snapdragon)</a></span></p>
-      <p class="meta">Free for 7 days. If Windows shows “Windows protected your PC”, choose More info → Run anyway: the installer isn't signed yet.</p>
-      <div class="shot-row windows">
-        <figure class="shot"><img src="shots/windows-flyout.png" alt="The OsmoSwitcher tray menu on Windows" loading="lazy"><figcaption>The tray menu</figcaption></figure>
-        <figure class="shot"><img src="shots/windows-stats.png" alt="OsmoSwitcher statistics on Windows: words fixed per day" loading="lazy"><figcaption>Statistics: numbers only</figcaption></figure>
-        <figure class="shot"><img src="shots/windows-exceptions.png" alt="OsmoSwitcher exceptions on Windows: programs and virtual machines left alone" loading="lazy"><figcaption>Programs it leaves alone</figcaption></figure>
-      </div>
-    </section>
-
-    <section id="pricing">
-      <h2>Pricing</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Mac</h3>
-          <p>Free for 7 days, then a yearly subscription (6,99 €) or a one-time purchase (14,99 €) in the Mac App Store. Payment and refunds are handled by Apple.</p>
+      <section class="feature-grid">
+        <div class="feature">
+          <h3>Fixes words as you type</h3>
+          <p>A small model built into the app reads the whole line, so abbreviations, commands and names typed on purpose stay as they are. In a terminal, <em>пше згыр</em> becomes <em>git push</em>.</p>
         </div>
-        <div class="card">
-          <h3>Windows</h3>
-          <p>Free for 7 days, then a license key bought on this site: a yearly subscription (6,99 €) or a one-time purchase (14,99 €). Payment is handled by our online reseller, Lemon Squeezy, the merchant of record. Paying with a Russian bank card? <a href="#rub">Buy in rubles</a>. <a href="terms/">Terms and refunds</a></p>
+        <div class="feature">
+          <h3>Double Shift</h3>
+          <p>Converts the last words, or the selected text, to the other layout. Only the words that read wrong are changed. Press it again to turn them back.</p>
         </div>
-      </div>
-    </section>
-
-    <section id="teams">
-      <h2>For teams</h2>
-      <div class="card">
-        <p>OsmoSwitcher keeps what people type on their computers. On the Mac it has no network access at all: macOS doesn't let it connect. On Windows the only thing that goes out is the license check, about once a day: the key and an activation id. Keys for a team, an invoice for the company: write to <a href="mailto:octoosmo@gmail.com?subject=OsmoSwitcher%20for%20a%20team">octoosmo@gmail.com</a>.</p>
-      </div>
-    </section>
-
-    <article id="ru" lang="ru" style="margin-top: 46px">
-      <p class="eyebrow">По-русски</p>
-      <h2>Набрали не в той раскладке? Уже исправлено.</h2>
-      <p>OsmoSwitcher для Mac и Windows замечает слово, набранное не в той раскладке, прямо во время набора, стирает его и печатает заново в нужной: <em>ghbdtn</em> становится <em>привет</em>, <em>руддщ</em> — <em>hello</em>.</p>
-      <p class="cta"><a class="button" href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-x64-setup.exe">Скачать для Windows</a> <span class="button button-soon" title="На проверке в Apple">Mac App Store — скоро</span></p>
-      <p class="meta">7 дней бесплатно · Windows на <a href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-arm64-setup.exe">ARM</a> · <a href="#rub">Купить картой РФ</a></p>
-
-      <div class="demo" data-lang="ru">
-        <div class="demo-field" aria-hidden="true"><span class="demo-text"></span><span class="demo-caret"></span></div>
-        <p class="demo-note meta"></p>
-        <div class="saved">
-          <label>Путаете раскладку <input type="number" min="1" max="500" value="20" class="saved-times"> раз в день,</label>
-          <label>исправить вручную — <input type="number" min="1" max="60" value="5" class="saved-secs"> секунд:</label>
-          <p class="saved-result"></p>
+        <div class="feature">
+          <h3>Private by design</h3>
+          <p>No account, no analytics. Nothing you type is stored or sent anywhere. <a href="privacy/">Privacy Policy</a></p>
         </div>
+      </section>
+
+      <section class="can" aria-label="What it handles">
+        <h2>What it handles</h2>
+        <ul class="can-list">
+          <li><strong>Words you meant.</strong> Abbreviations, commands, names and code stay as typed: the model reads the whole line, not one word.</li>
+          <li><strong>Terminals.</strong> <em>пше згыр</em> becomes <em>git push</em>, <em>ыыр</em> becomes <em>ssh</em>.</li>
+          <li><strong>Remote desktops and virtual machines.</strong> RDP, Parallels, VMware, VirtualBox, TeamViewer: the window of the remote computer is left to the layout inside it, so the two never fight. Install OsmoSwitcher there too, and it fixes words on that side.</li>
+          <li><strong>Selected text.</strong> On the Mac, select a line typed in the wrong layout and press Shift twice.</li>
+          <li><strong>Changing your mind.</strong> Switch the layout back right after a fix, or press Shift twice again, and the word returns as typed.</li>
+          <li><strong>Sound.</strong> On the Mac, a short sound when words are converted, and on fixes if you like.</li>
+          <li><strong>Passwords.</strong> On the Mac, password fields are hidden from the app by macOS itself.</li>
+          <li><strong>Programs of your choice.</strong> Add any app to the exceptions, or pause OsmoSwitcher from its menu.</li>
+        </ul>
+      </section>
+
+      <section class="shots" aria-label="Screenshots">
+        <h2>On the Mac</h2>
+        <p class="meta">A menu bar app for macOS 15 and later.</p>
+        <figure class="shot"><img src="shots/mac-1.jpg" alt="The OsmoSwitcher menu on a Mac: fix as you type, double Shift, sound, excluded apps" loading="lazy"></figure>
+        <div class="shot-row">
+          <figure class="shot"><img src="shots/mac-2.jpg" alt="OsmoSwitcher Settings on a Mac" loading="lazy"></figure>
+          <figure class="shot"><img src="shots/mac-3.jpg" alt="OsmoSwitcher Pro purchase window on a Mac" loading="lazy"></figure>
+        </div>
+
+        <h2>On Windows</h2>
+        <p class="meta">A tray app for Windows 10 and 11, on Intel, AMD and ARM.</p>
+        <p id="download" class="download"><a class="button" href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-x64-setup.exe">Download for Windows</a> <span class="meta">&nbsp;Intel and AMD · <a href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-arm64-setup.exe">ARM (Snapdragon)</a></span></p>
+        <p class="meta">Free for 7 days. If Windows shows “Windows protected your PC”, choose More info → Run anyway: the installer isn't signed yet.</p>
+        <div class="shot-row windows">
+          <figure class="shot"><img src="shots/windows-flyout.png" alt="The OsmoSwitcher tray menu on Windows" loading="lazy"><figcaption>The tray menu</figcaption></figure>
+          <figure class="shot"><img src="shots/windows-stats.png" alt="OsmoSwitcher statistics on Windows: words fixed per day" loading="lazy"><figcaption>Statistics: numbers only</figcaption></figure>
+          <figure class="shot"><img src="shots/windows-exceptions.png" alt="OsmoSwitcher exceptions on Windows: programs and virtual machines left alone" loading="lazy"><figcaption>Programs it leaves alone</figcaption></figure>
+        </div>
+      </section>
+
+      <div class="two">
+        <section id="pricing">
+          <h2>Pricing</h2>
+          <div class="card-grid">
+            <div class="card">
+              <h3>Mac</h3>
+              <p>Free for 7 days, then a yearly subscription (6,99 €) or a one-time purchase (14,99 €) in the Mac App Store. Payment and refunds are handled by Apple.</p>
+            </div>
+            <div class="card">
+              <h3>Windows</h3>
+              <p>Free for 7 days, then a license key bought on this site: a yearly subscription (6,99 €) or a one-time purchase (14,99 €). Payment is handled by our online reseller, Lemon Squeezy, the merchant of record. Paying with a Russian bank card? <a href="?lang=ru#rub">Buy in rubles</a>. <a href="terms/">Terms and refunds</a></p>
+            </div>
+          </div>
+        </section>
+
+        <section id="teams">
+          <h2>For teams</h2>
+          <div class="card">
+            <p>OsmoSwitcher keeps what people type on their computers. On the Mac it has no network access at all: macOS doesn't let it connect. On Windows the only thing that goes out is the license check, about once a day: the key and an activation id. Keys for a team, an invoice for the company: write to <a href="mailto:octoosmo@gmail.com?subject=OsmoSwitcher%20for%20a%20team">octoosmo@gmail.com</a>.</p>
+          </div>
+        </section>
       </div>
-      <h3>Исправляет слова на лету</h3>
-      <p>Встроенная в приложение небольшая модель читает всю строку, поэтому сокращения, команды и имена, набранные намеренно, остаются как есть. В терминале <em>пше згыр</em> становится <em>git push</em>.</p>
-      <h3>Двойной Shift</h3>
-      <p>Переводит последние слова или выделенный текст в другую раскладку. Меняются только слова, набранные не в той раскладке. Нажмите ещё раз — вернутся обратно.</p>
-      <h3>Конфиденциально</h3>
-      <p>Без аккаунта и аналитики. Ничего из набранного не сохраняется и никуда не отправляется. <a href="privacy/">Политика конфиденциальности</a> · <a href="support/">Поддержка</a></p>
-      <h3>Что умеет</h3>
-      <ul class="can-list">
-        <li><strong>Не трогает нужное.</strong> Сокращения, команды, имена и код остаются как набраны: модель читает всю строку, а не одно слово.</li>
-        <li><strong>Терминал.</strong> <em>пше згыр</em> становится <em>git push</em>, <em>ыыр</em> — <em>ssh</em>.</li>
-        <li><strong>Удалённые столы и виртуальные машины.</strong> RDP, Parallels, VMware, VirtualBox, TeamViewer: окно удалённого компьютера остаётся раскладке внутри него, так что они не спорят. Поставьте OsmoSwitcher и туда — он будет исправлять слова на той стороне.</li>
-        <li><strong>Выделенный текст.</strong> На Mac выделите строку, набранную не в той раскладке, и дважды нажмите Shift.</li>
-        <li><strong>Передумали.</strong> Переключите раскладку сразу после исправления или ещё раз дважды нажмите Shift — слово вернётся как было.</li>
-        <li><strong>Звук.</strong> На Mac — короткий звук при переводе слов, а по желанию и при исправлении.</li>
-        <li><strong>Пароли.</strong> На Mac поля паролей скрывает от приложения сама macOS.</li>
-        <li><strong>Исключения.</strong> Любую программу можно добавить в исключения или поставить OsmoSwitcher на паузу.</li>
-      </ul>
-      <h3>Для организаций</h3>
-      <p>OsmoSwitcher оставляет набранное на компьютере. На Mac у него вообще нет доступа к сети — macOS не даёт ему подключаться. На Windows наружу уходит только проверка ключа, примерно раз в день: сам ключ и номер активации. Ключи на команду, счёт для компании — пишите на <a href="mailto:octoosmo@gmail.com?subject=OsmoSwitcher%20%D0%B4%D0%BB%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B">octoosmo@gmail.com</a>.</p>
-      <h3>Цена</h3>
-      <p>Mac: 7 дней бесплатно, затем подписка на год (6,99 €) или покупка навсегда (14,99 €) в Mac App Store. Windows: 7 дней бесплатно, затем лицензионный ключ на этом сайте — подписка на год (6,99 €) или покупка навсегда (14,99 €) через Lemon Squeezy, или в рублях картой российского банка. <a href="terms/#ru">Условия и возврат</a></p>
 
-      <h3>Скачать для Windows</h3>
-      <p><a class="button" href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-x64-setup.exe">Скачать для Windows</a> <span class="meta">&nbsp;Intel и AMD · <a href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-arm64-setup.exe">ARM (Snapdragon)</a></span></p>
-      <p class="meta">Для Windows 10 и 11, 7 дней бесплатно. Если Windows покажет «Система Windows защитила ваш компьютер», нажмите «Подробнее» → «Выполнить в любом случае»: установщик пока не подписан.</p>
+      <div class="dock" aria-hidden="true">
+        <span class="dock-name"><img src="icon.png" alt="" width="28" height="28"> OsmoSwitcher <span class="meta">7 days free</span></span>
+        <a class="button" href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-x64-setup.exe" tabindex="-1">Download for Windows</a>
+        <span class="button button-soon">Mac App Store — soon</span>
+      </div>
 
-      <h3 id="rub">Ключ для Windows картой российского банка</h3>
-      <form class="buy" method="post" action="https://keys.osmosoft.app/buy">
-        <label class="plan"><input type="radio" name="plan" value="lifetime" checked> <span><strong>Навсегда — 990 ₽</strong><br>Один платёж, обновления включены.</span></label>
-        <label class="plan"><input type="radio" name="plan" value="yearly"> <span><strong>На год — 490 ₽</strong><br>Продлевается каждый год, отменить можно в любой момент.</span></label>
-        <label class="email">Почта для ключа<input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
-        <button class="button" type="submit">Перейти к оплате</button>
-      </form>
-      <p class="meta">Оплата картой российского банка через сервис lava.top. После оплаты ключ появится на странице и придёт на почту. Ключ работает на 5 компьютерах. <a href="terms/#ru">Условия и возврат</a> · <a href="privacy/#ru">Конфиденциальность</a></p>
-    </article>
+      <footer>© 2026 OsmoSoft · <a href="terms/">Terms</a> · <a href="privacy/">Privacy</a> · <a href="mailto:octoosmo@gmail.com">octoosmo@gmail.com</a></footer>
+    </div>
+
+    <!-- По-русски -->
+    <div data-only="ru" lang="ru">
+      <div class="hero">
+        <header id="ru">
+          <img class="hero-icon" src="icon.png" alt="" width="112" height="112">
+          <p class="eyebrow">Для Mac и Windows</p>
+          <h1>Набрали не в той раскладке? Уже исправлено.</h1>
+          <p class="lede">OsmoSwitcher замечает слово, набранное не в той раскладке, прямо во время набора, стирает его и печатает заново в нужной: <em>ghbdtn</em> становится <em>привет</em>, <em>руддщ</em> — <em>hello</em>.</p>
+          <p class="cta"><a class="button" href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-x64-setup.exe">Скачать для Windows</a> <span class="button button-soon" title="На проверке в Apple">Mac App Store — скоро</span></p>
+          <p class="meta">7 дней бесплатно · Windows на <a href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-arm64-setup.exe">ARM</a> · <a href="#rub">Купить картой РФ</a></p>
+        </header>
+
+        <section class="demo" data-lang="ru" aria-label="Как это работает">
+          <div class="demo-field" aria-hidden="true"><span class="demo-text"></span><span class="demo-caret"></span></div>
+          <p class="demo-note meta"></p>
+          <div class="saved">
+            <label>Путаете раскладку <input type="number" min="1" max="500" value="20" class="saved-times"> раз в день,</label>
+            <label>исправить вручную — <input type="number" min="1" max="60" value="5" class="saved-secs"> секунд:</label>
+            <p class="saved-result"></p>
+          </div>
+        </section>
+      </div>
+
+      <section class="feature-grid">
+        <div class="feature">
+          <h3>Исправляет слова на лету</h3>
+          <p>Встроенная в приложение небольшая модель читает всю строку, поэтому сокращения, команды и имена, набранные намеренно, остаются как есть. В терминале <em>пше згыр</em> становится <em>git push</em>.</p>
+        </div>
+        <div class="feature">
+          <h3>Двойной Shift</h3>
+          <p>Переводит последние слова или выделенный текст в другую раскладку. Меняются только слова, набранные не в той раскладке. Нажмите ещё раз — вернутся обратно.</p>
+        </div>
+        <div class="feature">
+          <h3>Конфиденциально</h3>
+          <p>Без аккаунта и аналитики. Ничего из набранного не сохраняется и никуда не отправляется. <a href="privacy/#ru">Политика конфиденциальности</a></p>
+        </div>
+      </section>
+
+      <section class="can" aria-label="Что умеет">
+        <h2>Что умеет</h2>
+        <ul class="can-list">
+          <li><strong>Не трогает нужное.</strong> Сокращения, команды, имена и код остаются как набраны: модель читает всю строку, а не одно слово.</li>
+          <li><strong>Терминал.</strong> <em>пше згыр</em> становится <em>git push</em>, <em>ыыр</em> — <em>ssh</em>.</li>
+          <li><strong>Удалённые столы и виртуальные машины.</strong> RDP, Parallels, VMware, VirtualBox, TeamViewer: окно удалённого компьютера остаётся раскладке внутри него, так что они не спорят. Поставьте OsmoSwitcher и туда — он будет исправлять слова на той стороне.</li>
+          <li><strong>Выделенный текст.</strong> На Mac выделите строку, набранную не в той раскладке, и дважды нажмите Shift.</li>
+          <li><strong>Передумали.</strong> Переключите раскладку сразу после исправления или ещё раз дважды нажмите Shift — слово вернётся как было.</li>
+          <li><strong>Звук.</strong> На Mac — короткий звук при переводе слов, а по желанию и при исправлении.</li>
+          <li><strong>Пароли.</strong> На Mac поля паролей скрывает от приложения сама macOS.</li>
+          <li><strong>Исключения.</strong> Любую программу можно добавить в исключения или поставить OsmoSwitcher на паузу.</li>
+        </ul>
+      </section>
+
+      <section class="shots" aria-label="Снимки экрана">
+        <h2>На Mac</h2>
+        <p class="meta">Приложение в строке меню для macOS 15 и новее.</p>
+        <figure class="shot"><img src="shots/mac-1.jpg" alt="Меню OsmoSwitcher на Mac: исправление на лету, двойной Shift, звук, исключения" loading="lazy"></figure>
+        <div class="shot-row">
+          <figure class="shot"><img src="shots/mac-2.jpg" alt="Настройки OsmoSwitcher на Mac" loading="lazy"></figure>
+          <figure class="shot"><img src="shots/mac-3.jpg" alt="Окно покупки OsmoSwitcher Pro на Mac" loading="lazy"></figure>
+        </div>
+
+        <h2>На Windows</h2>
+        <p class="meta">Приложение в области уведомлений для Windows 10 и 11, на Intel, AMD и ARM.</p>
+        <p id="download-ru" class="download"><a class="button" href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-x64-setup.exe">Скачать для Windows</a> <span class="meta">&nbsp;Intel и AMD · <a href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-arm64-setup.exe">ARM (Snapdragon)</a></span></p>
+        <p class="meta">7 дней бесплатно. Если Windows покажет «Система Windows защитила ваш компьютер», нажмите «Подробнее» → «Выполнить в любом случае»: установщик пока не подписан.</p>
+        <div class="shot-row windows">
+          <figure class="shot"><img src="shots/windows-flyout.png" alt="Меню OsmoSwitcher в Windows" loading="lazy"><figcaption>Меню в области уведомлений</figcaption></figure>
+          <figure class="shot"><img src="shots/windows-stats.png" alt="Статистика OsmoSwitcher в Windows: сколько слов исправлено по дням" loading="lazy"><figcaption>Статистика: только числа</figcaption></figure>
+          <figure class="shot"><img src="shots/windows-exceptions.png" alt="Исключения OsmoSwitcher в Windows: программы и виртуальные машины, которые он не трогает" loading="lazy"><figcaption>Программы, которые он не трогает</figcaption></figure>
+        </div>
+      </section>
+
+      <div class="two">
+        <section id="pricing-ru">
+          <h2>Цены</h2>
+          <div class="card-grid">
+            <div class="card">
+              <h3>Mac</h3>
+              <p>7 дней бесплатно, затем подписка на год (6,99 €) или покупка навсегда (14,99 €) в Mac App Store. Оплату и возвраты проводит Apple.</p>
+            </div>
+            <div class="card">
+              <h3>Windows</h3>
+              <p>7 дней бесплатно, затем лицензионный ключ на этом сайте: подписка на год (6,99 €) или покупка навсегда (14,99 €) через Lemon Squeezy — или в рублях <a href="#rub">картой российского банка</a>. <a href="terms/#ru">Условия и возврат</a></p>
+            </div>
+          </div>
+        </section>
+
+        <section id="teams-ru">
+          <h2>Для организаций</h2>
+          <div class="card">
+            <p>OsmoSwitcher оставляет набранное на компьютере. На Mac у него вообще нет доступа к сети — macOS не даёт ему подключаться. На Windows наружу уходит только проверка ключа, примерно раз в день: сам ключ и номер активации. Ключи на команду, счёт для компании — пишите на <a href="mailto:octoosmo@gmail.com?subject=OsmoSwitcher%20%D0%B4%D0%BB%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B">octoosmo@gmail.com</a>.</p>
+          </div>
+        </section>
+      </div>
+
+      <section class="card rub-card">
+        <h2 id="rub">Ключ для Windows картой российского банка</h2>
+        <form class="buy" method="post" action="https://keys.osmosoft.app/buy">
+          <label class="plan"><input type="radio" name="plan" value="lifetime" checked> <span><strong>Навсегда — 990 ₽</strong><br>Один платёж, обновления включены.</span></label>
+          <label class="plan"><input type="radio" name="plan" value="yearly"> <span><strong>На год — 490 ₽</strong><br>Продлевается каждый год, отменить можно в любой момент.</span></label>
+          <label class="email">Почта для ключа<input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
+          <button class="button" type="submit">Перейти к оплате</button>
+        </form>
+        <p class="meta">Оплата картой российского банка через сервис lava.top. После оплаты ключ появится на странице и придёт на почту. Ключ работает на 5 компьютерах. <a href="terms/#ru">Условия и возврат</a> · <a href="privacy/#ru">Конфиденциальность</a></p>
+      </section>
+
+      <div class="dock" aria-hidden="true">
+        <span class="dock-name"><img src="icon.png" alt="" width="28" height="28"> OsmoSwitcher <span class="meta">7 дней бесплатно</span></span>
+        <a class="button" href="https://github.com/OctoOsmo/osmoswitcher-pages/releases/latest/download/OsmoSwitcher-Windows-x64-setup.exe" tabindex="-1">Скачать для Windows</a>
+        <span class="button button-soon">Mac App Store — скоро</span>
+      </div>
+
+      <footer>© 2026 OsmoSoft · <a href="terms/#ru">Условия</a> · <a href="privacy/#ru">Конфиденциальность</a> · <a href="mailto:octoosmo@gmail.com">octoosmo@gmail.com</a></footer>
+    </div>
 
     <script src="demo.js" defer></script>
-    <footer>© 2026 OsmoSoft · <a href="terms/">Terms</a> · <a href="privacy/">Privacy</a> · <a href="mailto:octoosmo@gmail.com">octoosmo@gmail.com</a></footer>
   </main>
 </body>
 </html>

@@ -4,29 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Privacy Policy for the OsmoSwitcher Mac app.">
-  <title>Privacy Policy — OsmoSwitcher</title>
+  <title data-ru="Политика конфиденциальности — OsmoSwitcher">Privacy Policy — OsmoSwitcher</title>
   <link rel="icon" href="../icon.png">
   <link rel="stylesheet" href="../styles.css">
+  <script src="../lang.js"></script>
 </head>
 <body>
-  <main class="shell">
+  <main class="shell narrow">
     <nav aria-label="Primary navigation">
       <a class="brand" href="../">OsmoSwitcher</a>
       <div class="nav-links">
-        <a href="../privacy/">Privacy</a>
-        <a href="../terms/">Terms</a>
-        <a href="../support/">Support</a>
+        <a href="../privacy/" data-only="en">Privacy</a>
+        <a href="../terms/" data-only="en">Terms</a>
+        <a href="../support/" data-only="en">Support</a>
+        <a href="../privacy/#ru" data-only="ru">Конфиденциальность</a>
+        <a href="../terms/#ru" data-only="ru">Условия</a>
+        <a href="../support/#ru" data-only="ru">Поддержка</a>
+        <span class="lang-switch" role="group" aria-label="Language"><button type="button" data-set-lang="en">EN</button><button type="button" data-set-lang="ru">RU</button></span>
       </div>
     </nav>
 
-    <header>
+    <header data-only="en">
       <p class="eyebrow">Privacy Policy</p>
       <h1>What you type stays on your Mac.</h1>
       <p class="lede">OsmoSwitcher has no account, advertising, analytics, or server. It has no network access at all. The keys you press are read on your Mac to spot a word typed in the wrong keyboard layout, and are neither stored nor sent anywhere.</p>
-      <p class="meta">Effective date: November 13, 2026 · <a href="#ru">По-русски</a></p>
+      <p class="meta">Effective date: November 13, 2026</p>
     </header>
 
-    <article id="en">
+    <article id="en" data-only="en">
       <h2>Information OsmoSwitcher accesses</h2>
       <p>OsmoSwitcher may access the following information when you grant the relevant permission or use the relevant feature:</p>
       <ul>
@@ -66,12 +71,14 @@
       <p>For privacy questions, use the <a href="https://github.com/OctoOsmo/osmoswitcher-pages/issues/new?labels=privacy&amp;title=Privacy%20question">OsmoSwitcher support tracker</a>. Do not include passwords, private messages, or other sensitive text in a public issue. You can also write to <a href="mailto:octoosmo@gmail.com">octoosmo@gmail.com</a>.</p>
     </article>
 
-    <article id="ru" lang="ru">
+    <header id="ru" lang="ru" data-only="ru">
       <p class="eyebrow">Политика конфиденциальности</p>
-      <h2>Всё, что вы печатаете, остаётся на вашем Mac</h2>
-      <p>У OsmoSwitcher нет аккаунта, рекламы, аналитики и сервера, а доступа к сети нет вовсе. Нажатые клавиши читаются на вашем Mac, чтобы заметить слово, набранное не в той раскладке, и нигде не сохраняются и никуда не отправляются.</p>
+      <h1>Всё, что вы печатаете, остаётся на вашем Mac</h1>
+      <p class="lede">У OsmoSwitcher нет аккаунта, рекламы, аналитики и сервера, а доступа к сети нет вовсе. Нажатые клавиши читаются на вашем Mac, чтобы заметить слово, набранное не в той раскладке, и нигде не сохраняются и никуда не отправляются.</p>
       <p class="meta">Дата вступления в силу: 13 ноября 2026 г.</p>
+    </header>
 
+    <article lang="ru" data-only="ru">
       <h2>К каким данным обращается OsmoSwitcher</h2>
       <p>OsmoSwitcher может обращаться к следующим данным, если вы выдали соответствующее разрешение или пользуетесь соответствующей функцией:</p>
       <ul>
