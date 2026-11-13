@@ -178,6 +178,61 @@ footer {
   background: rgba(124, 200, 255, 0.12);
 }
 
+.buy {
+  display: grid;
+  gap: 12px;
+  max-width: 68ch;
+  margin: 14px 0 8px;
+}
+
+.buy .plan {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.buy .plan strong {
+  color: var(--text);
+}
+
+.buy .plan:has(input:checked) {
+  border-color: var(--accent);
+}
+
+.buy .plan input {
+  margin-top: 0.3em;
+  accent-color: var(--accent);
+}
+
+.buy .email {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.buy input[type="email"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--background);
+  color: var(--text);
+  font: inherit;
+}
+
+.buy .button {
+  justify-self: start;
+  border: 0;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .button {
   display: inline-block;
   margin-top: 10px;
