@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>OsmoSwitcher</title>
+    <item>
+      <title>1.0 (52)</title>
+      <pubDate>Sat, 14 Nov 2026 23:03:47 +0000</pubDate>
+      <sparkle:version>52</sparkle:version>
+      <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/OctoOsmo/osmoswitcher-pages/releases/download/mac/OsmoSwitcher-Mac-1.0-52.dmg" type="application/octet-stream" sparkle:edSignature="yS7p5cCXqwGN6s1jJvrTxCbdUTvroJ75PlJadFP/WAyinhIzizx8P0RCqFNBtkEugA2s6869oGlNACoo8zrlCQ==" length="5502469"/>
+    </item>
+  </channel>
+</rss>
