@@ -410,6 +410,12 @@ kbd {
   margin-top: 0;
 }
 
+.button-alt {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
 .button-soon {
   background: transparent;
   border: 1px solid var(--border);
@@ -676,7 +682,7 @@ body {
 
 @media (max-width: 620px) {
   .dock-name,
-  .dock .button-soon {
+  .dock .button-alt {
     display: none;
   }
 
