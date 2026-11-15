@@ -1,0 +1,11 @@
+{
+    "version":  "0.1.4",
+    "x64":  {
+                "url":  "https://github.com/OctoOsmo/osmoswitcher-pages/releases/download/windows-0.1.4/OsmoSwitcher-Windows-x64-setup.exe",
+                "sha256":  "49503585e7acb606bbefab42a66ae9615278b089422a08854f6c94b9e9fd5005"
+            },
+    "arm64":  {
+                  "url":  "https://github.com/OctoOsmo/osmoswitcher-pages/releases/download/windows-0.1.4/OsmoSwitcher-Windows-arm64-setup.exe",
+                  "sha256":  "26fc589d18f49b1e19a81a5303da5d19345665bb1523fe97caa6a6130a2f5004"
+              }
+}
