@@ -717,3 +717,7 @@ body {
     gap: 6px 14px;
   }
 }
+
+/* The Windows buttons at the top lead to the choice of Store or installer; land with its heading in view. */
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+.download { scroll-margin-top: 140px; }
