@@ -3,12 +3,12 @@
   <channel>
     <title>OsmoSwitcher</title>
     <item>
-      <title>1.1 (79)</title>
-      <pubDate>Wed, 18 Nov 2026 20:41:45 +0000</pubDate>
-      <sparkle:version>79</sparkle:version>
+      <title>1.1 (82)</title>
+      <pubDate>Wed, 18 Nov 2026 22:03:33 +0000</pubDate>
+      <sparkle:version>82</sparkle:version>
       <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <enclosure url="https://github.com/OctoOsmo/osmoswitcher-pages/releases/download/mac/OsmoSwitcher-Mac-1.1-79.dmg" type="application/octet-stream" sparkle:edSignature="wV+FJZaHuHcuqRKEljBwdO5v1vcX8PFBQ9SxHeaHdfK4Gmxu6Ih9FhwqLyNs8DMDaCoaeGm87FyubRikrEmyAw==" length="5616896"/>
+      <enclosure url="https://github.com/OctoOsmo/osmoswitcher-pages/releases/download/mac/OsmoSwitcher-Mac-1.1-82.dmg" type="application/octet-stream" sparkle:edSignature="oSXqyQmai2uFekQE2sQrA3Z+bvEG9eDdL1z9t2A39nmUjbzu+pRf/Hal+ZlyrJ9kxVSE/mFysPNLPhPiPLd+Bw==" length="5625082"/>
     </item>
   </channel>
 </rss>
