@@ -8,7 +8,7 @@
       <sparkle:version>79</sparkle:version>
       <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <enclosure url="https://github.com/OctoOsmo/osmoswitcher-pages/releases/download/mac/OsmoSwitcher-Mac-1.1-79.dmg" type="application/octet-stream" sparkle:edSignature="7EE3b0/t4SheUe+oe3VrtAuO4e5I2+L+1D6FbiDSC+coovC8USGQvwYFHoqVAMLxkJUGnC52c+A5I0Dly1dRAA==" length="5614921"/>
+      <enclosure url="https://github.com/OctoOsmo/osmoswitcher-pages/releases/download/mac/OsmoSwitcher-Mac-1.1-79.dmg" type="application/octet-stream" sparkle:edSignature="wV+FJZaHuHcuqRKEljBwdO5v1vcX8PFBQ9SxHeaHdfK4Gmxu6Ih9FhwqLyNs8DMDaCoaeGm87FyubRikrEmyAw==" length="5616896"/>
     </item>
   </channel>
 </rss>
